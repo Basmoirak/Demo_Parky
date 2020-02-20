@@ -23,7 +23,7 @@ namespace ParkyApi.Repository
             return Save();
         }
 
-        public bool deleteNationalPark(NationalPark nationalPark)
+        public bool DeleteNationalPark(NationalPark nationalPark)
         {
             _context.NationalParks.Remove(nationalPark);
             return Save();
@@ -56,7 +56,7 @@ namespace ParkyApi.Repository
             return _context.SaveChanges() >= 0 ? true : false;
         }
 
-        public bool updateNationalPark(NationalPark nationalPark)
+        public bool UpdateNationalPark(NationalPark nationalPark)
         {
             _context.NationalParks.Update(nationalPark);
             return Save();
