@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkyApi.Models;
@@ -15,7 +16,7 @@ namespace ParkyApi.Controllers
     [ApiController]
     //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecTrails")]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public class TrailsController : Controller
+    public class TrailsController : ControllerBase
     {
         private readonly ITrailRepository _trailRepo;
         private readonly IMapper _mapper;
